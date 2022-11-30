@@ -40,5 +40,8 @@ What things you need to install:
     4. Download sources Maven and update the project
     5. Running the project using command `mvn clean test`
 
+## Report
+[Click here to check the report](https://pempekriting.github.io/SauceLabsAppium/report/cucumber-html-reports/overview-features.html)
+
 ## Evidence
 ![](docs/Evidence-success.gif)
