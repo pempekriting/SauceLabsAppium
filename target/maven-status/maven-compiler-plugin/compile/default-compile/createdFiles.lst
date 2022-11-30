@@ -1,0 +1,9 @@
+pages/CheckoutPage.class
+constants/Constants.class
+driver/AndroidDriverInstance.class
+context/TestContext.class
+pages/BasePage.class
+pages/HeaderNavigation.class
+pages/MyCartPage.class
+pages/ProductsPage.class
+pages/LoginPage.class
