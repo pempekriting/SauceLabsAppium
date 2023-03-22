@@ -44,4 +44,4 @@ What things you need to install:
 [Click here to check the report](https://pempekriting.github.io/SauceLabsAppium/report/cucumber-html-reports/overview-features.html)
 
 ## Evidence
-![](docs/Evidence-success.gif)
+![](docs/Evidence.gif)

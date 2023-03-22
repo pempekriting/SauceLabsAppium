@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="33.331" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="Checkout" name="As a User, I want to checkout Sauce Lab Back Packs with blue color and quantity is 2" time="33.21">
+<testsuite name="Cucumber" time="24.466" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="Checkout" name="As a User, I want to checkout Sauce Lab Back Packs with blue color and quantity is 2" time="24.36">
 <system-out><![CDATA[
 Given User is already on Sauce Labs Apps....................................passed
 When User choose product....................................................passed
