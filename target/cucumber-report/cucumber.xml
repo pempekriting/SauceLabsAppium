@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="25.729">
-    <testcase classname="Checkout" name="As a User, I want to checkout Sauce Lab Back Packs with blue color and quantity is 2" time="25.621">
-        <system-out>
-            <![CDATA[Given User is already on Sauce Labs Apps....................................passed
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="24.474" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="Checkout" name="As a User, I want to checkout Sauce Lab Back Packs with blue color and quantity is 2" time="24.358">
+<system-out><![CDATA[
+Given User is already on Sauce Labs Apps....................................passed
 When User choose product....................................................passed
 And User choose color.......................................................passed
 And User input quantity.....................................................passed
@@ -12,7 +12,6 @@ And User fill the shipping address..........................................pass
 And User fill the payment method............................................passed
 And User place an order.....................................................passed
 Then User successfully checkout the goods...................................passed
-]]>
-        </system-out>
-    </testcase>
+]]></system-out>
+</testcase>
 </testsuite>

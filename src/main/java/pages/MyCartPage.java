@@ -1,13 +1,13 @@
 package pages;
 
 import context.TestContext;
-import io.appium.java_client.pagefactory.AndroidFindBy;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 public class MyCartPage extends BasePage {
 
-    @AndroidFindBy(id = "com.saucelabs.mydemoapp.android:id/cartBt")
-    WebElement btnProceedToCheckout;
+    @FindBy(id = "com.saucelabs.mydemoapp.android:id/cartBt")
+    private WebElement btnProceedToCheckout;
 
     public MyCartPage(TestContext context) {
         super(context);

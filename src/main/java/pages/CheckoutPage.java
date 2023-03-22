@@ -1,41 +1,35 @@
 package pages;
 
 import context.TestContext;
-import io.appium.java_client.pagefactory.AndroidFindBy;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 public class CheckoutPage extends BasePage {
 
-    @AndroidFindBy(id = "com.saucelabs.mydemoapp.android:id/fullNameET")
-    WebElement inpFullName;
-    @AndroidFindBy(id = "com.saucelabs.mydemoapp.android:id/address1ET")
-    WebElement inpAddressLineOne;
-    @AndroidFindBy(id = "com.saucelabs.mydemoapp.android:id/cityET")
-    WebElement inpCity;
-    @AndroidFindBy(id = "com.saucelabs.mydemoapp.android:id/zipET")
-    WebElement inpZipCode;
-    @AndroidFindBy(id = "com.saucelabs.mydemoapp.android:id/countryET")
-    WebElement inpCountry;
-    @AndroidFindBy(id = "com.saucelabs.mydemoapp.android:id/paymentBtn")
-    WebElement btnToPayment;
-
-    @AndroidFindBy(id = "com.saucelabs.mydemoapp.android:id/nameET")
-    WebElement inpFullNameCard;
-
-    @AndroidFindBy(id = "com.saucelabs.mydemoapp.android:id/cardNumberET")
-    WebElement inpCardNumber;
-
-    @AndroidFindBy(id = "com.saucelabs.mydemoapp.android:id/expirationDateET")
-    WebElement inpExpirationDate;
-
-    @AndroidFindBy(id = "com.saucelabs.mydemoapp.android:id/securityCodeET")
-    WebElement inpSecurityCode;
-
-    @AndroidFindBy(id = "com.saucelabs.mydemoapp.android:id/paymentBtn")
-    WebElement btnReviewOrder;
-
-    @AndroidFindBy(id = "com.saucelabs.mydemoapp.android:id/completeTV")
-    WebElement checkoutCompleteBanner;
+    @FindBy(id = "com.saucelabs.mydemoapp.android:id/fullNameET")
+    private WebElement inpFullName;
+    @FindBy(id = "com.saucelabs.mydemoapp.android:id/address1ET")
+    private WebElement inpAddressLineOne;
+    @FindBy(id = "com.saucelabs.mydemoapp.android:id/cityET")
+    private WebElement inpCity;
+    @FindBy(id = "com.saucelabs.mydemoapp.android:id/zipET")
+    private WebElement inpZipCode;
+    @FindBy(id = "com.saucelabs.mydemoapp.android:id/countryET")
+    private WebElement inpCountry;
+    @FindBy(id = "com.saucelabs.mydemoapp.android:id/paymentBtn")
+    private WebElement btnToPayment;
+    @FindBy(id = "com.saucelabs.mydemoapp.android:id/nameET")
+    private WebElement inpFullNameCard;
+    @FindBy(id = "com.saucelabs.mydemoapp.android:id/cardNumberET")
+    private WebElement inpCardNumber;
+    @FindBy(id = "com.saucelabs.mydemoapp.android:id/expirationDateET")
+    private WebElement inpExpirationDate;
+    @FindBy(id = "com.saucelabs.mydemoapp.android:id/securityCodeET")
+    private WebElement inpSecurityCode;
+    @FindBy(id = "com.saucelabs.mydemoapp.android:id/paymentBtn")
+    private WebElement btnReviewOrder;
+    @FindBy(id = "com.saucelabs.mydemoapp.android:id/completeTV")
+    private WebElement checkoutCompleteBanner;
 
     public CheckoutPage(TestContext context) {
         super(context);

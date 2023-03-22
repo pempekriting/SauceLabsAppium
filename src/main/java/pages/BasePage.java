@@ -3,33 +3,38 @@ package pages;
 import com.github.javafaker.Faker;
 import context.TestContext;
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.AndroidElement;
-import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.pagefactory.DefaultElementLocatorFactory;
+import org.openqa.selenium.support.ui.FluentWait;
 
+import java.time.Duration;
 import java.util.Locale;
 
 public class BasePage {
-    private final WebDriverWait wait;
-    private final AndroidDriver<AndroidElement> androidDriver;
 
+    private final AndroidDriver androidDriver;
     public static final Faker faker = new Faker(new Locale("in-ID"));
 
     public BasePage(TestContext context) {
-        wait = context.driverWait;
         androidDriver = context.androidDriver;
-        PageFactory.initElements(new AppiumFieldDecorator(androidDriver), this);
+        PageFactory.initElements(new DefaultElementLocatorFactory(androidDriver), this);
     }
 
-    private AndroidDriver<AndroidElement> getDriver() {
+    private AndroidDriver getDriver() {
         return androidDriver;
     }
 
-    public WebDriverWait getWait() {
-        return wait;
+    public FluentWait<AndroidDriver> fluentWait() {
+        return new FluentWait<>(getDriver())
+                .withTimeout(Duration.ofSeconds(10))
+                .pollingEvery(Duration.ofSeconds(10))
+                .ignoring(NoSuchElementException.class)
+                .ignoring(StaleElementReferenceException.class);
     }
+
 
     public String getValueAttribute(WebElement webElement, String attributeName) {
         return webElement.getAttribute(attributeName);

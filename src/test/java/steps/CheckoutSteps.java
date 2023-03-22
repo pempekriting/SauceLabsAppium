@@ -9,11 +9,12 @@ import org.testng.Assert;
 import pages.*;
 
 public class CheckoutSteps {
-    ProductsPage productsPage;
-    LoginPage loginPage;
-    CheckoutPage checkoutPage;
-    HeaderNavigation headerNavigation;
-    MyCartPage myCartPage;
+
+    private final ProductsPage productsPage;
+    private final LoginPage loginPage;
+    private final CheckoutPage checkoutPage;
+    private final HeaderNavigation headerNavigation;
+    private final MyCartPage myCartPage;
 
     public CheckoutSteps(TestContext context) {
         productsPage = new ProductsPage(context);

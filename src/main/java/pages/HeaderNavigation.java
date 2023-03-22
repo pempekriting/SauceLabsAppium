@@ -1,13 +1,13 @@
 package pages;
 
 import context.TestContext;
-import io.appium.java_client.pagefactory.AndroidFindBy;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 public class HeaderNavigation extends BasePage {
 
-    @AndroidFindBy(id = "com.saucelabs.mydemoapp.android:id/cartIV")
-    WebElement cartIcon;
+    @FindBy(id = "com.saucelabs.mydemoapp.android:id/cartIV")
+    private WebElement cartIcon;
 
     public HeaderNavigation(TestContext context) {
         super(context);
