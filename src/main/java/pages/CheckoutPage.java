@@ -36,37 +36,37 @@ public class CheckoutPage extends BasePage {
     }
 
     public CheckoutPage inputFullName() {
-        inpFullName.sendKeys(faker.name().fullName());
+        inpFullName.sendKeys(getFaker().name().fullName());
         return this;
     }
 
     public CheckoutPage inputAddressLineOne() {
-        inpAddressLineOne.sendKeys(faker.address().fullAddress());
+        inpAddressLineOne.sendKeys(getFaker().address().fullAddress());
         return this;
     }
 
     public CheckoutPage inputCityName() {
-        inpCity.sendKeys(faker.address().cityName());
+        inpCity.sendKeys(getFaker().address().cityName());
         return this;
     }
 
     public CheckoutPage inputZipCode() {
-        inpZipCode.sendKeys(faker.address().zipCode());
+        inpZipCode.sendKeys(getFaker().address().zipCode());
         return this;
     }
 
     public CheckoutPage inputCountryName() {
-        inpCountry.sendKeys(faker.address().country());
+        inpCountry.sendKeys(getFaker().address().country());
         return this;
     }
 
     public CheckoutPage inputFullNameCard() {
-        inpFullNameCard.sendKeys(faker.name().fullName());
+        inpFullNameCard.sendKeys(getFaker().name().fullName());
         return this;
     }
 
     public CheckoutPage inputCardNumber() {
-        inpCardNumber.sendKeys(faker.finance().creditCard());
+        inpCardNumber.sendKeys(getFaker().finance().creditCard());
         return this;
     }
 
@@ -76,7 +76,7 @@ public class CheckoutPage extends BasePage {
     }
 
     public CheckoutPage inputSecurityCode() {
-        inpSecurityCode.sendKeys(faker.number().digits(3));
+        inpSecurityCode.sendKeys(getFaker().number().digits(3));
         return this;
     }
 

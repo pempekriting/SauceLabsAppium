@@ -16,14 +16,14 @@ import java.util.Locale;
 public class BasePage {
 
     private final AndroidDriver androidDriver;
-    public static final Faker faker = new Faker(new Locale("in-ID"));
+    private final Faker faker = new Faker(new Locale("in-ID"));
 
     public BasePage(TestContext context) {
         androidDriver = context.androidDriver;
         PageFactory.initElements(new DefaultElementLocatorFactory(androidDriver), this);
     }
 
-    private AndroidDriver getDriver() {
+    public AndroidDriver getDriver() {
         return androidDriver;
     }
 
@@ -35,6 +35,9 @@ public class BasePage {
                 .ignoring(StaleElementReferenceException.class);
     }
 
+    public Faker getFaker() {
+        return faker;
+    }
 
     public String getValueAttribute(WebElement webElement, String attributeName) {
         return webElement.getAttribute(attributeName);
